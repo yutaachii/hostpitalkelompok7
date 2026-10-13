@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RS Kongsi - rumah sakit swasta dengan layanan kesehatan terpadu, dokter spesialis, rawat inap VIP, UGD 24 jam, dan konsultasi telemedicine.">
+    <meta name="theme-color" content="#3a86ff">
+    <title>Rumah Sakit Kongsi - Pelayanan Kesehatan Terpadu</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- STYLE: dipecah per tanggung jawab -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <a href="#layanan" class="sr-only">Lompat ke konten utama</a>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span><i class="fab fa-facebook" aria-hidden="true"></i> RS Kongsi Official</span>
+            <span><i class="fab fa-instagram" aria-hidden="true"></i> @rskongsi</span>
+            <span><i class="fas fa-phone" aria-hidden="true"></i> (021) 555-0199 / Careline 24 Jam</span>
+        </div>
+        <div class="top-right">
+            <span><i class="fas fa-location-dot" aria-hidden="true"></i> Jl. Kesehatan No. 88, Jakarta</span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" aria-label="Navigasi utama">
+        <div class="logo">
+            <div class="logo-symbol" aria-hidden="true"><i class="fas fa-hospital-user"></i></div>
+            <div class="logo-name">RS <span>KONGSI</span></div>
+        </div>
+
+        <div class="nav-right">
+            <div class="nav-menu" id="navMenu">
+                <a href="#layanan">Layanan</a>
+                <a href="#masalah">Solusi Sehat</a>
+                <a href="#kepercayaan">Profil</a>
+                <a href="#spesialis">Dokter Spesialis</a>
+                <a href="#perawatan">Fasilitas &amp; Keterangan</a>
+            </div>
+
+            <div class="user-section" id="userSection"></div>
+
+            <!-- Tombol hamburger untuk navigasi di layar HP -->
+            <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false"
+                aria-controls="navMenu" aria-label="Buka menu navigasi">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="layanan">
+            <div class="hero-content">
+                <span class="hero-tag">
+                    <i class="fas fa-heart-pulse" aria-hidden="true"></i>
+                    Pelayanan Kesehatan Terpadu &amp; Modern
+                </span>
+                <h1 class="hero-title">Kesehatan &amp; Senyuman Anda Adalah <span>Prioritas Utama Kami</span></h1>
+                <p class="hero-desc">
+                    Rumah Sakit Kongsi menghadirkan perpaduan perawatan medis profesional, teknologi mutakhir,
+                    dan kenyamanan seperti di rumah untuk Anda dan keluarga tercinta.
+                </p>
+
+                <div class="service-grid">
+                    <div class="service-item">
+                        <div class="service-icon" aria-hidden="true"><i class="fas fa-tooth"></i></div>
+                        <span>Dental &amp; Oral Center</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
+                        <span>Brain &amp; Spine Center</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon" aria-hidden="true"><i class="fas fa-bone"></i></div>
+                        <span>Orthopedic Excellence</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon" aria-hidden="true"><i class="fas fa-heart-pulse"></i></div>
+                        <span>Cardiology Unit</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: JIKA ANDA MENGALAMI HAL INI -->
+        <section class="section section--soft" id="masalah">
+            <div class="ps-container">
+                <div class="ps-left">
+                    <h2 class="ps-title">Apakah Anda Pernah<br><span>MENGALAMI Masalah Ini?</span></h2>
+                    <div class="ps-grid">
+                        <div class="ps-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=400&q=80"
+                                alt="Pasien berobat di rumah sakit" loading="lazy" decoding="async">
+                            <p>Sakit tapi tidak punya waktu antre berobat di rumah sakit.</p>
+                        </div>
+                        <div class="ps-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=400&q=80"
+                                alt="Dokter berkonsultasi dengan pasien" loading="lazy" decoding="async">
+                            <p>Ingin segera berkonsultasi cepat dengan dokter spesialis.</p>
+                        </div>
+                        <div class="ps-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=400&q=80"
+                                alt="Ruang tunggu klinik yang tenang" loading="lazy" decoding="async">
+                            <p>Khawatir dan kurang nyaman dengan suasana ruang rawat umum.</p>
+                        </div>
+                        <div class="ps-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=400&q=80"
+                                alt="Obat resep di atas meja" loading="lazy" decoding="async">
+                            <p>Sudah minum obat rutin, tetapi kondisi tetap tidak membaik.</p>
+                        </div>
+                        <div class="ps-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?auto=format&fit=crop&w=400&q=80"
+                                alt="Keluarga mendampingi pasien" loading="lazy" decoding="async">
+                            <p>Kesulitan transportasi untuk membawa anggota keluarga sakit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ps-right">
+                    <div class="ps-banner-box">
+                        <h3>RS Kongsi <span>HADIR SEBAGAI SOLUSI!</span></h3>
+                        <ul class="ps-list">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Layanan Pendaftaran &amp; Antrean Online
+                                Serba Cepat.</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Konsultasi Telemedicine 24 Jam Dari Rumah
+                                Anda.</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Ruang Inap VIP &amp; Super VIP Dengan
+                                Kenyamanan Maksimal.</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Dokter Spesialis Bersertifikat
+                                Internasional.</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Penanganan Darurat UGD Respon Cepat
+                                Kurang Dari 5 Menit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: PROFIL & STATISTIK -->
+        <section class="section" id="kepercayaan">
+            <div class="trust-container">
+                <div class="trust-gallery">
+                    <img class="trust-img"
+                        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80"
+                        alt="Dokter berdialog dengan pasien" loading="lazy" decoding="async">
+                    <img class="trust-img"
+                        src="https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?auto=format&fit=crop&w=600&q=80"
+                        alt="Perawat memeriksa tekanan darah pasien" loading="lazy" decoding="async">
+                    <img class="trust-img"
+                        src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80"
+                        alt="Pemeriksaan medis oleh tenaga kesehatan" loading="lazy" decoding="async">
+                    <img class="trust-img"
+                        src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=600&q=80"
+                        alt="Tim medis siap melayani pasien" loading="lazy" decoding="async">
+                </div>
+
+                <div class="trust-content">
+                    <h2 class="trust-title">Kepercayaan Anda,<br><span>Adalah Semangat Utama Kami</span></h2>
+                    <p class="trust-desc">RS Kongsi berkomitmen memberikan kemudahan akses pelayanan kesehatan modern.
+                        Kami memadukan hangatnya pelayanan humanis dengan presisi teknologi medis terkini.</p>
+                    <p class="trust-desc">Didukung oleh lebih dari 50+ Dokter Spesialis dan ratusan tenaga medis profesional
+                        yang berdedikasi melayani pasien dari seluruh penjuru kota.</p>
+
+                    <div class="trust-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                            <h4>35.000+</h4>
+                            <p>Pasien Terlayani</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-user-doctor" aria-hidden="true"></i>
+                            <h4>50+</h4>
+                            <p>Dokter Spesialis</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-award" aria-hidden="true"></i>
+                            <h4>100%</h4>
+                            <p>Akreditasi Paripurna</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: DOKTER SPESIALIS, diisi otomatis oleh js/ui.js -->
+        <section class="section section--blue" id="spesialis">
+            <div class="section-header">
+                <h2 class="section-title">Dokter Spesialis <span>Terbaik Kami</span></h2>
+                <p class="section-subtitle">Pilih kategori spesialis untuk melihat profil lengkap dokter ahli dan
+                    membuat janji temu langsung.</p>
+            </div>
+
+            <div class="specialist-grid" id="specialistGrid"></div>
+        </section>
+
+        <!-- SECTION: FASILITAS & KETERANGAN PELAYANAN MEDIS -->
+        <section class="section" id="perawatan">
+            <div class="section-header">
+                <h2 class="section-title">Fasilitas &amp; <span>Keterangan Pelayanan</span></h2>
+                <p class="section-subtitle">Penjelasan lengkap mengenai ragam fasilitas medis unggulan yang siap
+                    melayani Anda.</p>
+            </div>
+
+            <div class="medical-grid">
+                <!-- CARD 1 -->
+                <div class="medical-card-detail">
+                    <div class="medical-header-box">
+                        <div class="medical-icon-box" aria-hidden="true"><i class="fas fa-stethoscope"></i></div>
+                        <div class="medical-card-title">Klinik Rawat Jalan</div>
+                    </div>
+                    <p class="medical-card-desc">
+                        Pelayanan pemeriksaan dan konsultasi medis rawat jalan tanpa perlu menginap. Dilengkapi dengan
+                        konsultasi dokter spesialis multi-disiplin dan sistem antrean digital terintegrasi.
+                    </p>
+                    <ul class="medical-feature-list">
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Konsultasi Spesialis Lengkap</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Ruang Tunggu Nyaman &amp; AC</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Sistem Rekam Medis Elektronik</li>
+                    </ul>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="medical-card-detail">
+                    <div class="medical-header-box">
+                        <div class="medical-icon-box" aria-hidden="true"><i class="fas fa-bed"></i></div>
+                        <div class="medical-card-title">Rawat Inap VIP &amp; Super VIP</div>
+                    </div>
+                    <p class="medical-card-desc">
+                        Fasilitas kamar perawatan berdesain modern dan tenang layaknya hotel berbintang, dirancang
+                        untuk mendukung percepatan proses pemulihan fisik dan mental pasien.
+                    </p>
+                    <ul class="medical-feature-list">
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Perawat Dedikasi 24 Jam</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Ruang Keluarga &amp; Smart TV</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Menu Makanan Khusus Nutrisionis</li>
+                    </ul>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="medical-card-detail">
+                    <div class="medical-header-box">
+                        <div class="medical-icon-box" aria-hidden="true"><i class="fas fa-user-doctor"></i></div>
+                        <div class="medical-card-title">Medical Check Up (MCU)</div>
+                    </div>
+                    <p class="medical-card-desc">
+                        Paket skrining kesehatan menyeluruh secara berkala untuk mendeteksi potensi penyakit secara dini.
+                        Meliputi tes laboratorium lengkap, EKG, X-Ray, dan konsultasi dokter.
+                    </p>
+                    <ul class="medical-feature-list">
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Paket MCU Eksekutif &amp; Personal</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Hasil Pemeriksaan Cepat &amp; Akurat</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Konsultasi Hasil MCU Gratis</li>
+                    </ul>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="medical-card-detail">
+                    <div class="medical-header-box">
+                        <div class="medical-icon-box" aria-hidden="true"><i class="fas fa-truck-medical"></i></div>
+                        <div class="medical-card-title">UGD 24 Jam Siap Sigap</div>
+                    </div>
+                    <p class="medical-card-desc">
+                        Unit Gawat Darurat yang siap melayani kondisi medis darurat medis 24 jam nonstop dengan respon
+                        tim penanganan trauma &amp; kritis dalam hitungan menit.
+                    </p>
+                    <ul class="medical-feature-list">
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Armada Ambulans ICU Mobile</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Tim Dokter &amp; Perawat Triage</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Fasilitas Resusitasi Lengkap</li>
+                    </ul>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="medical-card-detail">
+                    <div class="medical-header-box">
+                        <div class="medical-icon-box" aria-hidden="true"><i class="fas fa-flask"></i></div>
+                        <div class="medical-card-title">Laboratorium Patologi</div>
+                    </div>
+                    <p class="medical-card-desc">
+                        Pemeriksaan sampel darah, urin, dan jaringan menggunakan peralatan penganalisis otomatis
+                        berteknologi tinggi untuk akurasi hasil diagnostik terbaik.
+                    </p>
+                    <ul class="medical-feature-list">
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Layanan Tes Darah Lengkap &amp; PCR</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Hasil Digital Bisa Diakses HP</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Standar Kontrol Kualitas Tinggi</li>
+                    </ul>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="medical-card-detail">
+                    <div class="medical-header-box">
+                        <div class="medical-icon-box" aria-hidden="true"><i class="fas fa-pills"></i></div>
+                        <div class="medical-card-title">Farmasi &amp; Apotek 24/7</div>
+                    </div>
+                    <p class="medical-card-desc">
+                        Penyediaan obat bermerek berlisensi resmi, racikan apoteker profesional, serta layanan
+                        penyerahan obat langsung dengan penjelasan edukasi pemakaian obat.
+                    </p>
+                    <ul class="medical-feature-list">
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Obat Paten &amp; Generik Lengkap</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pengantaran Obat Ke Rumah Pasien</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Konsultasi Apoteker Gratis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ALUR PELAYANAN -->
+            <div class="flow-section">
+                <h3 class="flow-title">4 Langkah Mudah Mendapatkan Pelayanan di RS Kongsi</h3>
+                <div class="flow-grid">
+                    <div class="flow-step">
+                        <div class="step-num" aria-hidden="true">1</div>
+                        <h4>Buat Janji / Daftar</h4>
+                        <p>Gunakan menu online atau WhatsApp untuk memilih jadwal dokter.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-num" aria-hidden="true">2</div>
+                        <h4>Konfirmasi &amp; Tiba</h4>
+                        <p>Tiba di RS Kongsi dan lakukan verifikasi cepat di konter resepsionis.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-num" aria-hidden="true">3</div>
+                        <h4>Pemeriksaan Medis</h4>
+                        <p>Berkonsultasi dan diperiksa oleh tim dokter spesialis terbaik kami.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-num" aria-hidden="true">4</div>
+                        <h4>Pengobatan &amp; Sembuh</h4>
+                        <p>Ambil resep di apotek dan nikmati pemulihan kesehatan Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: FAQ -->
+        <section class="section" id="faq">
+            <div class="section-header">
+                <h2 class="section-title">Pertanyaan <span>Sering Diajukan (FAQ)</span></h2>
+                <p class="section-subtitle">Informasi penting terkait pendaftaran dan pelayanan kesehatan kami.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h4><i class="fas fa-circle-question" aria-hidden="true"></i> Bagaimana cara membuat janji dokter?</h4>
+                    <p>Anda cukup menekan tombol "Buat Janji" di menu sebelah kiri, lalu login dan memilih dokter
+                        spesialis serta tanggal kunjungan yang Anda inginkan.</p>
+                </div>
+                <div class="faq-card">
+                    <h4><i class="fas fa-circle-question" aria-hidden="true"></i> Apakah RS Kongsi melayani
+                        Telemedicine?</h4>
+                    <p>Ya, kami melayani konsultasi dokter secara daring via Video Call atau Chat melalui fitur
+                        Telemedicine yang tersedia di situs ini.</p>
+                </div>
+                <div class="faq-card">
+                    <h4><i class="fas fa-circle-question" aria-hidden="true"></i> Apakah layanan UGD buka setiap
+                        hari?</h4>
+                    <p>Layanan UGD dan Ambulans RS Kongsi beroperasional 24 jam nonstop setiap hari termasuk hari libur
+                        nasional.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FLOATING MENU KIRI -->
+    <div class="floating-menu">
+        <button type="button" class="float-item" id="btnJanji">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            <span>Buat Janji</span>
+        </button>
+        <button type="button" class="float-item" id="btnTele">
+            <i class="fas fa-laptop-medical" aria-hidden="true"></i>
+            <span>Telemedicine</span>
+        </button>
+    </div>
+
+    <!-- WHATSAPP: tampil setelah CONFIG.whatsappNumber diisi di js/config.js -->
+    <button type="button" class="whatsapp" id="whatsappBtn" aria-label="Hubungi RS Kongsi via WhatsApp" hidden>
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </button>
+
+    <!-- MODAL AUTHENTIKASI -->
+    <div class="modal-overlay" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle"
+        aria-hidden="true">
+        <div class="modal-card modal-card--narrow">
+            <button type="button" class="close-modal" data-close-modal="authModal" aria-label="Tutup">&times;</button>
+            <div class="modal-header">
+                <h2 id="authTitle">Login Akun</h2>
+            </div>
+            <div class="modal-body">
+                <form id="authForm" novalidate>
+                    <div class="form-group">
+                        <label for="authUsername">Username</label>
+                        <input type="text" id="authUsername" autocomplete="username" maxlength="30" required
+                            placeholder="Masukkan Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="authPassword">Password</label>
+                        <input type="password" id="authPassword" autocomplete="current-password" required
+                            placeholder="Masukkan Password">
+                    </div>
+                    <div class="form-group" id="confirmPassGroup" hidden>
+                        <label for="authConfirmPassword">Konfirmasi Password</label>
+                        <input type="password" id="authConfirmPassword" autocomplete="new-password"
+                            placeholder="Ulangi Password">
+                        <span class="form-hint">Minimal 6 karakter.</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="authSubmitBtn">Login</button>
+
+                    <div class="auth-toggle-link" id="authToggleBtn" role="button" tabindex="0">
+                        Belum punya akun? Daftar di sini.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL BUAT JANJI -->
+    <div class="modal-overlay" id="janjiModal" role="dialog" aria-modal="true" aria-labelledby="janjiTitle"
+        aria-hidden="true">
+        <div class="modal-card">
+            <button type="button" class="close-modal" data-close-modal="janjiModal" aria-label="Tutup">&times;</button>
+            <div class="modal-header">
+                <h2 id="janjiTitle">Buat Janji Temu Dokter (Tatap Muka)</h2>
+            </div>
+            <div class="modal-body">
+                <form id="janjiForm" novalidate>
+                    <div class="form-group">
+                        <label for="namaPasien">Nama Pasien</label>
+                        <input type="text" id="namaPasien" maxlength="60" required placeholder="Masukkan Nama Lengkap">
+                    </div>
+                    <div class="form-group">
+                        <label for="dokterPilihan">Pilih Dokter Spesialis</label>
+                        <select id="dokterPilihan" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggalJanji">Tanggal Kunjungan</label>
+                        <input type="date" id="tanggalJanji" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="catatanJanji">Keluhan / Catatan Singkat</label>
+                        <textarea id="catatanJanji" rows="3" maxlength="300"
+                            placeholder="Tuliskan keluhan singkat Anda"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Konfirmasi Janji Temu</button>
+                </form>
+
+                <div class="janji-list">
+                    <h3 class="janji-list-title">Jadwal Janji Temu Anda:</h3>
+                    <div id="janjiContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL TELEMEDICINE -->
+    <div class="modal-overlay" id="telemedicineModal" role="dialog" aria-modal="true" aria-labelledby="teleTitle"
+        aria-hidden="true">
+        <div class="modal-card">
+            <button type="button" class="close-modal" data-close-modal="telemedicineModal"
+                aria-label="Tutup">&times;</button>
+            <div class="modal-header">
+                <h2 id="teleTitle">Telemedicine - Konsultasi Online 24/7</h2>
+            </div>
+            <div class="modal-body">
+                <form id="teleForm" novalidate>
+                    <div class="form-group">
+                        <label for="teleNamaPasien">Nama Pasien</label>
+                        <input type="text" id="teleNamaPasien" maxlength="60" required
+                            placeholder="Masukkan Nama Pasien">
+                    </div>
+                    <div class="form-group">
+                        <label for="teleDokter">Pilih Dokter Online</label>
+                        <select id="teleDokter" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="teleMetode">Metode Konsultasi</label>
+                        <select id="teleMetode" required>
+                            <option value="Video Call">Video Call HD (30 Menit)</option>
+                            <option value="Chat Live">Chat Live &amp; Resep Digital (45 Menit)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="teleWaktu">Waktu Konsultasi Online</label>
+                        <input type="datetime-local" id="teleWaktu" required>
+                    </div>
+                    <div class="tele-price-tag" id="teleTagHarga">Total Biaya: Rp 0</div>
+                    <button type="submit" class="submit-btn submit-btn--spaced">Mulai Konsultasi Online</button>
+                </form>
+
+                <div class="janji-list">
+                    <h3 class="janji-list-title">Konsultasi Online Aktif:</h3>
+                    <div id="teleContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PROFIL DOKTER -->
+    <div class="modal-overlay" id="doctorModal" role="dialog" aria-modal="true" aria-labelledby="doctorTitle"
+        aria-hidden="true">
+        <div class="modal-card">
+            <button type="button" class="close-modal" data-close-modal="doctorModal" aria-label="Tutup">&times;</button>
+            <div class="modal-header">
+                <h2 id="doctorTitle">Dokter Spesialis Terbaik</h2>
+            </div>
+            <div class="modal-body">
+                <div class="doctor-profile-card">
+                    <img id="docImg" class="doctor-img"
+                        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80"
+                        alt="Foto dokter" loading="lazy" decoding="async">
+                    <div class="doctor-details">
+                        <h3 id="docName">Dr. Nama Dokter</h3>
+                        <div id="docSpec" class="doctor-spec">Spesialisasi</div>
+                        <p id="docDesc" class="doctor-desc">Deskripsi tentang dokter.</p>
+                        <div class="doctor-actions">
+                            <button type="button" class="doctor-action-btn" id="btnBuatJanji">Buat Janji RS</button>
+                            <button type="button" class="doctor-action-btn doctor-action-btn--blue"
+                                id="btnKonsulOnline">Konsultasi Online</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Rumah Sakit Kongsi. Layanan Kesehatan Terpercaya Berstandar Internasional.</p>
+    </footer>
+
+    <!-- SCRIPT: dipecah per modul, dimuat berurutan karena saling bergantung -->
+    <script src="js/config.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/janji.js" defer></script>
+    <script src="js/telemedicine.js" defer></script>
+</body>
+
+</html>

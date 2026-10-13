@@ -1,0 +1,274 @@
+/* =====================================================
+   LAYOUT - TOP BAR, NAVBAR, HERO, WRAPPER SECTION, FOOTER
+   RS KONGSI
+   ===================================================== */
+
+/* =====================================================
+   TOP BAR
+   ===================================================== */
+.top-bar {
+    height: 42px;
+    background: linear-gradient(135deg, var(--blue-primary), var(--blue-dark));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    font-size: 13px;
+    gap: 20px;
+}
+
+.top-left,
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-bar i {
+    margin-right: 6px;
+    color: var(--pink-tint);
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+.navbar {
+    height: var(--nav-height);
+    background: rgba(255, 255, 255, 0.96);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    box-shadow: 0 4px 20px rgba(58, 134, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    border-bottom: 2px solid var(--pink-light);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-symbol {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--pink-primary), var(--blue-primary));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(255, 107, 139, 0.3);
+    flex-shrink: 0;
+}
+
+.logo-name {
+    color: var(--blue-dark);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.logo-name span {
+    color: var(--pink-primary);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-menu a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+    color: var(--pink-primary);
+}
+
+/* FIX: di versi lama .nav-menu disembunyikan di <768px tanpa ada penggantinya,
+   sehingga menu navigasi mati total di HP. Sekarang ada tombol hamburger. */
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--blue-light);
+    background: white;
+    border-radius: 12px;
+    color: var(--blue-dark);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.nav-toggle:hover {
+    background: var(--pink-light);
+    border-color: var(--pink-primary);
+    color: var(--pink-primary);
+}
+
+/* =====================================================
+   SECTION WRAPPER
+   ===================================================== */
+.section {
+    padding: 80px 8%;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-title {
+    color: var(--blue-dark);
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.section-title span {
+    color: var(--pink-primary);
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.section--soft {
+    background: linear-gradient(180deg, var(--bg-white) 0%, var(--pink-light) 100%);
+}
+
+.section--blue {
+    background: var(--blue-light);
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+.hero {
+    min-height: 550px;
+    position: relative;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.96) 35%, rgba(238, 245, 255, 0.7) 100%),
+                url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 6px 18px;
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 107, 139, 0.2);
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--blue-dark);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.hero-title span {
+    color: var(--pink-primary);
+}
+
+.hero-desc {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.service-item {
+    padding: 14px 20px;
+    border-radius: 14px;
+    background: white;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.05);
+    transition: var(--transition);
+    border: 1px solid var(--blue-light);
+}
+
+.service-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-blue);
+    border-color: var(--pink-primary);
+}
+
+.service-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--pink-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink-primary);
+    margin-right: 12px;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer {
+    background: linear-gradient(135deg, var(--blue-dark), #0f172a);
+    color: white;
+    text-align: center;
+    padding: 35px;
+    font-size: 13px;
+    border-top: 4px solid var(--pink-primary);
+}

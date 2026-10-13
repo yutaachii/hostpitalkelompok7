@@ -1,0 +1,227 @@
+/* =====================================================
+   RESPONSIVE - BREAKPOINT & PERBAIKAN TAMPILAN MOBILE
+   RS KONGSI
+   ===================================================== */
+
+/* =====================================================
+   TABLET & MOBILE  (<= 900px)
+   ===================================================== */
+@media (max-width: 900px) {
+    .section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .top-bar {
+        padding: 0 5%;
+    }
+
+    .flow-section {
+        padding: 30px;
+    }
+
+    .ps-banner-box {
+        padding: 32px 24px;
+    }
+}
+
+/* =====================================================
+   MOBILE  (<= 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+    :root {
+        --nav-height: 72px;
+    }
+
+    /* FIX BUG: di versi lama .nav-menu di display:none tanpa ada tombol
+       pengganti, jadi navigasi utama mati total di HP. Sekarang menu
+       berubah jadi panel dropdown yang dibuka lewat tombol hamburger. */
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-right {
+        gap: 12px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: white;
+        border-bottom: 2px solid var(--pink-light);
+        box-shadow: 0 12px 24px rgba(58, 134, 255, 0.12);
+        padding: 8px 5% 14px;
+    }
+
+    .nav-menu.is-open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--blue-light);
+        font-size: 15px;
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .logo-name {
+        font-size: 17px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title,
+    .ps-title,
+    .trust-title {
+        font-size: 26px;
+    }
+
+    .doctor-profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .doctor-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .doctor-actions {
+        justify-content: center;
+    }
+
+    .floating-menu {
+        left: 10px;
+    }
+
+    .trust-stats {
+        flex-direction: column;
+    }
+
+    .flow-title {
+        font-size: 20px;
+    }
+
+    /* Tooltip floating menu menimpa konten di layar sempit */
+    .float-item span {
+        display: none;
+    }
+}
+
+/* =====================================================
+   MOBILE KECIL  (<= 480px)
+   ===================================================== */
+@media (max-width: 480px) {
+    .top-bar {
+        height: auto;
+        padding: 8px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .top-left,
+    .top-right {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    /* FIX: 2 kolom di layar < 400px memaksa overflow horizontal */
+    .ps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-section,
+    .ps-banner-box {
+        padding: 24px 18px;
+    }
+
+    .medical-card-detail {
+        padding: 22px 18px;
+    }
+
+    .modal-header,
+    .modal-body {
+        padding: 20px;
+    }
+
+    .whatsapp {
+        right: 14px;
+        bottom: 14px;
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+    }
+
+    .floating-menu {
+        left: 6px;
+        gap: 8px;
+    }
+
+    .float-item {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* =====================================================
+   LAYAR SENTUH
+   ===================================================== */
+@media (hover: none) {
+    .ps-card:hover,
+    .medical-card-detail:hover,
+    .specialist-card:hover,
+    .trust-img {
+        transform: none;
+    }
+}
+
+/* =====================================================
+   CETAK
+   ===================================================== */
+@media print {
+    .top-bar,
+    .navbar,
+    .floating-menu,
+    .whatsapp,
+    .modal-overlay {
+        display: none !important;
+    }
+}

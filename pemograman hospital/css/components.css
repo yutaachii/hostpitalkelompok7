@@ -1,0 +1,920 @@
+/* =====================================================
+   COMPONENTS - CARD, FLOATING MENU, MODAL, FORM
+   RS KONGSI
+   ===================================================== */
+
+/* =====================================================
+   CARD: MASALAH KESEHATAN
+   ===================================================== */
+.ps-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* FIX: min-width: 320px yang kaku pada flex item memaksa overflow
+   horizontal di layar sempit. Sekarang min(320px, 100%). */
+.ps-left {
+    flex: 1.2 1 340px;
+    min-width: min(320px, 100%);
+}
+
+.ps-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--blue-dark);
+    margin-bottom: 25px;
+}
+
+.ps-title span {
+    color: var(--pink-primary);
+}
+
+.ps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.ps-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--pink-light);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.ps-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pink-primary);
+}
+
+.ps-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.ps-card p {
+    padding: 12px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.ps-right {
+    flex: 1 1 340px;
+    min-width: min(320px, 100%);
+}
+
+.ps-banner-box {
+    background: linear-gradient(135deg, var(--blue-primary), var(--blue-dark));
+    border-radius: 24px;
+    padding: 40px 30px;
+    color: white;
+    box-shadow: var(--shadow-blue);
+}
+
+.ps-banner-box h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.ps-banner-box h3 span {
+    color: var(--pink-tint);
+    display: block;
+}
+
+.ps-list li {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.ps-list li:last-child {
+    margin-bottom: 0;
+}
+
+.ps-list i {
+    color: var(--pink-primary);
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* =====================================================
+   CARD: PROFIL & STATISTIK
+   ===================================================== */
+.trust-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.trust-gallery {
+    flex: 1 1 340px;
+    min-width: min(320px, 100%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.trust-img {
+    border-radius: 18px;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.08);
+}
+
+.trust-content {
+    flex: 1.2 1 340px;
+    min-width: min(320px, 100%);
+}
+
+.trust-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--blue-dark);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.trust-title span {
+    color: var(--pink-primary);
+}
+
+.trust-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.trust-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.stat-card {
+    flex: 1 1 0;
+    background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+    color: white;
+    padding: 20px 15px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.stat-card i {
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.stat-card h4 {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.stat-card p {
+    font-size: 11px;
+    opacity: 0.95;
+    font-weight: 600;
+}
+
+/* =====================================================
+   CARD: DOKTER SPESIALIS
+   ===================================================== */
+.specialist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px;
+}
+
+.specialist-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid var(--blue-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    font: inherit;
+    color: inherit;
+}
+
+.specialist-card:hover {
+    background: var(--pink-primary);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-soft);
+}
+
+.specialist-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--pink-light);
+    color: var(--pink-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0 auto 15px;
+    transition: var(--transition);
+}
+
+.specialist-card:hover .specialist-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.specialist-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* =====================================================
+   CARD: FASILITAS MEDIS
+   ===================================================== */
+/* FIX: minmax(320px, 1fr) + padding 8% bikin horizontal scroll
+   di HP < 400px. min(320px, 100%) mencegah overflow. */
+.medical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.medical-card-detail {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--blue-light);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.medical-card-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--pink-primary), var(--blue-primary));
+}
+
+.medical-card-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-blue);
+    border-color: var(--pink-primary);
+}
+
+.medical-header-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.medical-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--blue-light);
+    color: var(--blue-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.medical-card-detail:hover .medical-icon-box {
+    background: var(--pink-light);
+    color: var(--pink-primary);
+}
+
+.medical-card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--blue-dark);
+}
+
+.medical-card-desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.medical-feature-list {
+    padding-top: 10px;
+    border-top: 1px dashed var(--blue-light);
+}
+
+.medical-feature-list li {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.medical-feature-list li:last-child {
+    margin-bottom: 0;
+}
+
+.medical-feature-list i {
+    color: var(--pink-primary);
+    font-size: 11px;
+}
+
+/* =====================================================
+   ALUR PELAYANAN PASIEN
+   ===================================================== */
+.flow-section {
+    background: linear-gradient(135deg, var(--blue-light), var(--pink-light));
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+}
+
+.flow-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--blue-dark);
+    margin-bottom: 30px;
+}
+
+.flow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: 20px;
+}
+
+.flow-step {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.step-num {
+    width: 36px;
+    height: 36px;
+    background: var(--pink-primary);
+    color: white;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 14px;
+}
+
+.flow-step h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--blue-dark);
+    margin-bottom: 6px;
+}
+
+.flow-step p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* =====================================================
+   FAQ
+   ===================================================== */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 20px;
+}
+
+.faq-card {
+    background: var(--bg-soft);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid var(--blue-light);
+}
+
+.faq-card h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--blue-dark);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-card h4 i {
+    color: var(--pink-primary);
+}
+
+.faq-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* =====================================================
+   FLOATING MENU KIRI
+   ===================================================== */
+.floating-menu {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* FIX: versi lama mengubah width 60px -> 150px saat hover, padahal posisinya
+   fixed. Itu memaksa reflow & membuat menu berkedip. Sekarang ukuran dikunci,
+   label muncul sebagai tooltip overlay. */
+.float-item {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: white;
+    color: var(--pink-primary);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(255, 107, 139, 0.2);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid var(--pink-light);
+    font: inherit;
+}
+
+.float-item:hover,
+.float-item:focus-visible {
+    background: var(--pink-primary);
+    color: white;
+    border-color: var(--pink-dark);
+}
+
+.float-item i {
+    font-size: 20px;
+}
+
+.float-item span {
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-6px);
+    background: var(--blue-dark);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 7px 12px;
+    border-radius: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.float-item:hover span,
+.float-item:focus-visible span {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* =====================================================
+   TOMBOL WHATSAPP
+   ===================================================== */
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--wa-green);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 80;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp[hidden] {
+    display: none;
+}
+
+/* =====================================================
+   MODAL
+   ===================================================== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-card {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal-card--narrow {
+    max-width: 420px;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--text-muted);
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: var(--pink-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    background: var(--pink-primary);
+    color: white;
+}
+
+.modal-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid var(--blue-light);
+}
+
+.modal-header h2 {
+    color: var(--blue-dark);
+    font-size: 22px;
+    font-weight: 800;
+    padding-right: 40px;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+/* =====================================================
+   FORM
+   ===================================================== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-input);
+    border-radius: 12px;
+    font-size: 14px;
+    transition: var(--transition);
+    background: white;
+    color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--pink-primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 139, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-hint {
+    display: block;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+}
+
+.submit-btn:hover {
+    filter: brightness(0.96);
+}
+
+.submit-btn--spaced {
+    margin-top: 15px;
+}
+
+.auth-toggle-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--pink-primary);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.auth-toggle-link:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   MODAL PROFIL DOKTER
+   ===================================================== */
+.doctor-profile-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.doctor-img {
+    width: 130px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.doctor-details h3 {
+    color: var(--blue-dark);
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.doctor-spec {
+    color: var(--pink-primary);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.doctor-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.doctor-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.doctor-action-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.doctor-action-btn:hover {
+    background: var(--pink-primary);
+    color: white;
+}
+
+.doctor-action-btn--blue {
+    background: var(--blue-primary);
+    color: white;
+}
+
+.doctor-action-btn--blue:hover {
+    background: var(--blue-dark);
+}
+
+/* =====================================================
+   DAFTAR JANJI / KONSULTASI
+   ===================================================== */
+.janji-list {
+    margin-top: 25px;
+    border-top: 1px solid var(--blue-light);
+    padding-top: 20px;
+}
+
+.janji-list-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--blue-dark);
+}
+
+.janji-item {
+    background: var(--bg-soft);
+    padding: 14px 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    border-left: 4px solid var(--pink-primary);
+}
+
+.janji-item:last-child {
+    margin-bottom: 0;
+}
+
+.janji-item strong {
+    color: var(--text-dark);
+}
+
+.janji-item-meta {
+    display: block;
+    margin-top: 4px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.janji-item-note {
+    display: block;
+    margin-top: 6px;
+    padding: 8px 10px;
+    background: white;
+    border-radius: 8px;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.empty-state {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.tele-item {
+    border-left-color: var(--blue-primary);
+}
+
+.tele-price {
+    color: var(--pink-primary);
+    font-weight: 700;
+}
+
+.tele-price-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* =====================================================
+   TOAST (pengganti alert)
+   ===================================================== */
+.toast-stack {
+    position: fixed;
+    top: calc(var(--nav-height) + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+    width: min(420px, calc(100% - 32px));
+}
+
+.toast {
+    background: var(--text-dark);
+    color: white;
+    padding: 13px 18px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: toastIn 0.25s ease;
+}
+
+.toast--success {
+    background: #15803d;
+}
+
+.toast--error {
+    background: #b91c1c;
+}
+
+.toast--info {
+    background: var(--blue-dark);
+}
+
+.toast.is-hiding {
+    animation: toastOut 0.25s ease forwards;
+}
+
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes toastOut {
+    to {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+}
